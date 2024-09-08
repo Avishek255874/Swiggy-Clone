@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/Swiggy-Emblem.png";
+import logo from "../../assets/logo.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
 import { CiDiscount1 } from "react-icons/ci";
@@ -63,7 +63,7 @@ const Hearder = () => {
 
       <header className="p-[15px] shadow-xl">
         <div className="max-w-[1200px] mx-auto  flex items-center">
-          <div className="w-[90px] hover:scale-125 transition-all duration-500 cursor-pointer">
+          <div className="w-[70px] hover:scale-125 transition-all duration-500 cursor-pointer">
             <img src={logo} alt="" className="w-full" />
           </div>
           <div className="">
@@ -72,7 +72,7 @@ const Hearder = () => {
             <RiArrowDownSLine
               onClick={showSliderMenu}
               fontSize={25}
-              className=" inline text-[#fc8019]  cursor-pointer"
+              className=" inline text-[#11ff00]  cursor-pointer"
             />
           </div>
           <nav className="flex list-none gap-5 ml-auto text-[18] font-semibold">
@@ -80,11 +80,11 @@ const Hearder = () => {
               return (
                 <li
                   key={index}
-                  className=" flex items-center hover:text-[#fc8019] gap-2 cursor-pointer"
+                  className=" flex items-center hover:text-[#11ff00] gap-2 cursor-pointer"
                 >
                   {link.icon}
                   {link.name}
-                  <sup className="text-[#fc8019]">{link.sup}</sup>
+                  <sup className="text-[#11ff00]">{link.sup}</sup>
                 </li>
               );
             })}

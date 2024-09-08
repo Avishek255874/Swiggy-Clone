@@ -30,13 +30,13 @@ const Catogory = () => {
         <div className="text-[25px] font-bold">What's on your mind?</div>
         <div className="flex">
           <div
-            className=" flex items-center justify-center w-[30px] h-[30px] bg-slate-200  cursor-pointer rounded-full mx-2"
+            className=" flex items-center justify-center w-[30px] h-[30px] bg-[#11ff00]  cursor-pointer rounded-full mx-2 text-white"
             onClick={preSlide}
           >
             <FaChevronLeft />
           </div>
           <div
-            className=" flex items-center justify-center w-[30px] h-[30px] bg-slate-200  cursor-pointer rounded-full mx-2 "
+            className=" flex items-center justify-center w-[30px] h-[30px] bg-[#11ff00]  text-white cursor-pointer rounded-full mx-2 "
             onClick={nextSlide}
           >
             <FaChevronRight />

@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import logo from './assets/logo.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Hearder from './Components/Header/Hearder';
 import Catogory from './Components/Catogory';
+import Footer from './Components/Footer/Footer';
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +15,8 @@ function App() {
     <>
     <Hearder/>
     <Catogory/>
+    <Footer/>
+
      
     </>
   )
