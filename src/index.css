@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+.Black-Overlay{
+  background-color: rgb(0, 0, 0, 0.5);
+}
