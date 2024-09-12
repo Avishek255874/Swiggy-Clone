@@ -6,7 +6,7 @@ import State from "./State";
 
 const Information = () => {
   return (
-    <div className="  flex justify-center bg-black h-[400px] text-white p-5 border-red-600 border-2  ">
+    <div className="  flex justify-center bg-black h-[400px] text-white p-5 ">
       <div className="flex justify-between w-[1200px] ">
         <div className="p-3">
           <img src={swigg} alt="" className="w-[150px] h-[60px]" />
