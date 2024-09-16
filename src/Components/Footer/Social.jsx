@@ -1,5 +1,5 @@
 import React from "react";
-import play from "../../assets/play.png";
+import play from "../../assets/Play.png";
 import app from "../../assets/apple.png";
 
 const Social = () => {

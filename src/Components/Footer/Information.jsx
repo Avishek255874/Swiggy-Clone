@@ -10,12 +10,17 @@ const Information = () => {
       <div className="flex justify-between w-[1200px] ">
         <div className="p-3">
           <img src={swigg} alt="" className="w-[150px] h-[60px]" />
-
           <p className="text-slate-400 ps-3">©️2024 ASSASS Pvt.Ltd Group. </p>
         </div>
-        <div className=""><Company/></div>
-        <div className=""><ContactUs/></div>
-        <div className=""><State/></div>
+        <div className="">
+          <Company />
+        </div>
+        <div className="">
+          <ContactUs />
+        </div>
+        <div className="">
+          <State />
+        </div>
       </div>
     </div>
   );

@@ -1,14 +1,14 @@
-import React from 'react'
-import Social from './Social'
-import Information from './Information'
+import React from "react";
+import Social from "./Social";
+import Information from "./Information";
 
 const Footer = () => {
   return (
-                    <div>
-                 <Social/>
-                    <Information/>
+    <div>
+      <Social />
+      <Information />
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
