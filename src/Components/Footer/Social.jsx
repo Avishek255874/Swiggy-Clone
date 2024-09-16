@@ -1,6 +1,6 @@
 import React from "react";
-import play from "../../assets/playstore.png";
-import app from "../../assets/appstore.png";
+import play from "../../assets/play.png";
+import app from "../../assets/apple.png";
 
 const Social = () => {
   return (
