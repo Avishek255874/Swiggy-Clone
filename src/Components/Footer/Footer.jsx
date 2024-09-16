@@ -5,10 +5,8 @@ import Information from './Information'
 const Footer = () => {
   return (
                     <div>
-                 
+                 <Social/>
                     <Information/>
-                 
-    
     </div>
   )
 }
