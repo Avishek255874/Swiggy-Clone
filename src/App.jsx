@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Hearder from "./Components/Header/Hearder";
 import Catogory from "./Components/Catogory";
 import Footer from "./Components/Footer/Footer";
+import CardItems from "./Components/Card/CardItems";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
     <>
       <Hearder />
       <Catogory />
+      <CardItems />
       <Footer />
     </>
   );
