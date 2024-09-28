@@ -6,6 +6,7 @@ import Hearder from "./Components/Header/Hearder";
 import Catogory from "./Components/Catogory";
 import Footer from "./Components/Footer/Footer";
 import CardItems from "./Components/Card/CardItems";
+import OnlineDelivery from "./Components/OnlineDelivery/OnlineDelivery";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
       <Hearder />
       <Catogory />
       <CardItems />
+      <OnlineDelivery/>
       <Footer />
     </>
   );
