@@ -98,5 +98,15 @@
         "maxTime": 40,
         "name": "Cake",
         "place": "Chopsani Housing Board"
+    },
+    {
+        "image": "2a41aa363a8ae1e98a4cce95c2d0c589.jpeg",
+        "offer": "₹100 OFF ABOVE ₹449",
+        "title": "Kajal's Cake",
+        "rating": 4.5,
+        "minTime": 35,
+        "maxTime": 40,
+        "name": "Cake",
+        "place": "Chopsani Housing Board"
     }
 ]

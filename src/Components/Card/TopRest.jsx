@@ -16,7 +16,7 @@ const TopRest = () => {
     return (
       <div >
         <div className="  my-3 flex items-center justify-between">
-          <div className="text-[25px] font-bold">hlooo</div>
+          <div className="text-[25px] font-bold"></div>
           <div className="flex">
             <div className=" flex items-center justify-center w-[30px] h-[30px] bg-[#11ff00]  cursor-pointer rounded-full mx-2 text-white">
               <FaChevronLeft />

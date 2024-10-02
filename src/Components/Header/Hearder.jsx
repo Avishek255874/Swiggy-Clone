@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
@@ -19,6 +20,7 @@ const Hearder = () => {
     {
       icon: <IoSearchOutline />,
       name: "Search",
+      link: "/search", 
     },
     {
       icon: <CiDiscount1 />,
@@ -82,8 +84,17 @@ const Hearder = () => {
                   key={index}
                   className=" flex items-center hover:text-[#11ff00] gap-2 cursor-pointer"
                 >
-                  {link.icon}
-                  {link.name}
+                  {link.link ? (
+                    <Link to={link.link} className="flex items-center gap-2">
+                      {link.icon}
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <>
+                      {link.icon}
+                      {link.name}
+                    </>
+                  )}
                   <sup className="text-[#11ff00]">{link.sup}</sup>
                 </li>
               );

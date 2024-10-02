@@ -2,23 +2,34 @@ import { useState } from "react";
 import logo from "./assets/logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Hearder from "./Components/Header/Hearder";
-import Catogory from "./Components/Catogory";
-import Footer from "./Components/Footer/Footer";
-import CardItems from "./Components/Card/CardItems";
-import OnlineDelivery from "./Components/OnlineDelivery/OnlineDelivery";
+import * as React from "react";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+  BrowserRouter,
+} from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>     
+        <Route path="/" element={<Home />} />  
+        <Route path="/home" element={<Home />} />
+        <Route path="/search" element={<Search/>} />
+        </>
+    
+    )
+  );
   return (
-    <>
-      <Hearder />
-      <Catogory />
-      <CardItems />
-      <OnlineDelivery/>
-      <Footer />
-    </>
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
