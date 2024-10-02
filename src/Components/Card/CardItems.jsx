@@ -26,12 +26,8 @@ const CardItems = () => {
           Top restaurant chains in Kolkata
         </div>
         <div className="flex">
-          <div className="flex items-center justify-center w-[30px] h-[30px] bg-[#11ff00] cursor-pointer rounded-full mx-2 text-white">
-            <FaChevronLeft />
-          </div>
-          <div className="flex items-center justify-center w-[30px] h-[30px] bg-[#11ff00] text-white cursor-pointer rounded-full mx-2">
-            <FaChevronRight />
-          </div>
+         
+       
         </div>
       </div>
       <div className="flex gap-3 overflow-hidden">

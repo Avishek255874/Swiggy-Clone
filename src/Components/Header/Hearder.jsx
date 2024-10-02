@@ -7,6 +7,7 @@ import { CiDiscount1 } from "react-icons/ci";
 import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { BsCart2 } from "react-icons/bs";
+import SideBar from "../SideBar/SideBar";
 
 const Hearder = () => {
   const [toggle, setToggle] = useState(false);
@@ -26,10 +27,12 @@ const Hearder = () => {
       icon: <CiDiscount1 />,
       name: "Offers",
       sup: "New",
+      link: "/offers",
     },
     {
       icon: <IoHelpBuoyOutline />,
       name: "Help",
+      link: "/help",
     },
     {
       icon: <FiUser />,
@@ -45,7 +48,7 @@ const Hearder = () => {
   return (
     <>
       <div
-        className="Black-Overlay w-full h-full fixed duration-500"
+        className="Black-Overlay w-full h-full fixed duration-500 z-50 "
         onClick={hideSideMenu}
         style={{
           opacity: toggle ? 1 : 0,
@@ -57,18 +60,20 @@ const Hearder = () => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="w-[500px] bg-white h-full absolute duration-500 "
+        className="w-[754px] bg-white h-full absolute duration-500 z-50 "
         style={{
           left: toggle ? 0 : "-100%",
         }}
-      ></div>
+      >
+    <SideBar/>
+      </div>
 
       <header className="p-[15px] shadow-xl">
         <div className="max-w-[1200px] mx-auto  flex items-center">
           <div className="w-[70px] hover:scale-125 transition-all duration-500 cursor-pointer">
             <img src={logo} alt="" className="w-full" />
           </div>
-          <div className="">
+          <div >
             <span className=" font-bold border-b-[3px] pr-3">Kolkata</span>
             Thakurpukur ,India{" "}
             <RiArrowDownSLine
