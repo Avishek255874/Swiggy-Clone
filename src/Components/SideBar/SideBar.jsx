@@ -24,10 +24,10 @@ const SideBar = ({ hideSideMenu }) => {
 
   return (
     <div className="pl-8 pt-5 ">
-      {/* Cross icon with click event to close sidebar */}
+    
       <i
         className="fa-solid fa-x text-[20px] cursor-pointer"
-        onClick={hideSideMenu} // Call the prop function to hide the sidebar
+        onClick={hideSideMenu} 
       />
       <br />
       <br />

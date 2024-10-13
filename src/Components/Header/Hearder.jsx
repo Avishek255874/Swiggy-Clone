@@ -8,11 +8,11 @@ import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { BsCart2 } from "react-icons/bs";
 import SideBar from "../SideBar/SideBar";
-import LeftSideBar from "../SideBar/LeftSideBar"; // Import LeftSideBar
+import LeftSideBar from "../SideBar/LeftSideBar";
 
 const Header = () => {
-  const [showLeftSideBar, setShowLeftSideBar] = useState(false); // Left sidebar state
-  const [showRightSideBar, setShowRightSideBar] = useState(false); // Right sidebar state
+  const [showLeftSideBar, setShowLeftSideBar] = useState(false); 
+  const [showRightSideBar, setShowRightSideBar] = useState(false); 
 
   // Function to show or hide the left sidebar
   const toggleLeftSideBar = () => {
@@ -47,6 +47,7 @@ const Header = () => {
     {
       icon: <FiUser />,
       name: "SignIn",
+      
     },
     {
       icon: <BsCart2 />,
@@ -57,7 +58,7 @@ const Header = () => {
 
   return (
     <>
-      {/* Overlay to hide menus when clicked outside */}
+     
       {(showLeftSideBar || showRightSideBar) && (
         <div
           className="Black-Overlay w-full h-full fixed z-40 bg-black opacity-50"
@@ -68,7 +69,7 @@ const Header = () => {
         ></div>
       )}
 
-      {/* Right Side Menu */}
+      
       <div
         className={`fixed top-0 right-0 w-[754px] h-full bg-white z-50 duration-500 transform ${
           showRightSideBar ? "translate-x-0" : "translate-x-full"
@@ -77,35 +78,34 @@ const Header = () => {
         <SideBar hideSideMenu={toggleSideBar} />
       </div>
 
-      {/* Left Side Menu (Sign In) */}
+   
       <div
-        className={`fixed top-0 left-0 w-[754px] h-full bg-white z-50 duration-500 transform ${
+        className={`fixed top-0 left-0 w-[650px] h-full  bg-white z-50 duration-500 transform ${
           showLeftSideBar ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <LeftSideBar hideSideMenu={toggleLeftSideBar} />
       </div>
 
-      {/* Header */}
+     
       <header className="p-[15px] shadow-xl">
         <div className="max-w-[1200px] mx-auto flex items-center">
-          {/* Logo */}
+       
           <div className="w-[70px] hover:scale-125 transition-all duration-500 cursor-pointer">
             <img src={logo} alt="Logo" className="w-full" />
           </div>
 
-          {/* Location */}
+       
           <div>
             <span className="font-bold border-b-[3px] pr-3">Kolkata</span>
-            Thakurpukur, India{" "}
+            Thakurpukur, India
             <RiArrowDownSLine
-              onClick={toggleRightSideBar} // Open right sidebar for location change
+              onClick={toggleRightSideBar}
               fontSize={25}
               className="inline text-[#11ff00] cursor-pointer"
             />
           </div>
 
-          {/* Navigation Links */}
           <nav className="flex list-none gap-5 ml-auto text-[18px] font-semibold">
             {link.map((link, index) => (
               <li
@@ -122,7 +122,7 @@ const Header = () => {
                     className="flex items-center gap-2"
                     onClick={() => {
                       if (link.name === "SignIn") {
-                        toggleLeftSideBar(); // Open left sidebar for SignIn
+                        toggleLeftSideBar(); 
                       }
                     }}
                   >
