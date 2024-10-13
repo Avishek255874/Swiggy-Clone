@@ -12,6 +12,7 @@ import {
   createRoutesFromElements,
   BrowserRouter,
 } from "react-router-dom";
+import Offer from "./pages/Offer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />  
         <Route path="/home" element={<Home />} />
         <Route path="/search" element={<Search/>} />
+        <Route path="/offers" element={<Offer/>} />
         </>
     
     )

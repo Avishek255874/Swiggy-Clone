@@ -25,16 +25,13 @@ const OnlineDelivery = () => {
         <div className="text-[25px] font-bold">
           Restaurants with online food delivery in Kolkata
         </div>
-        </div>
-     <div className="grid grid-cols-4 gap-3">
-     {
-        data.map((d, i) => {
-          return  <Card {...d} />;
-         
-        })
-      }
-     </div>
-      
+      </div>
+      <div className="grid grid-cols-4 gap-3">
+        {data.map((d, i) => {
+          return <Card {...d} />;
+        })}
+      </div>
+      <hr className="  my-6 border-[1px] shadow-xl" />
     </div>
   );
 };

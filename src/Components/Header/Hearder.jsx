@@ -8,20 +8,30 @@ import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { BsCart2 } from "react-icons/bs";
 import SideBar from "../SideBar/SideBar";
+import LeftSideBar from "../SideBar/LeftSideBar"; // Import LeftSideBar
 
-const Hearder = () => {
-  const [toggle, setToggle] = useState(false);
-  const showSliderMenu = () => {
-    setToggle(true);
+const Header = () => {
+  const [showLeftSideBar, setShowLeftSideBar] = useState(false); // Left sidebar state
+  const [showRightSideBar, setShowRightSideBar] = useState(false); // Right sidebar state
+
+  // Function to show or hide the left sidebar
+  const toggleLeftSideBar = () => {
+    setShowLeftSideBar(!showLeftSideBar);
   };
-  const hideSideMenu = () => {
-    setToggle(false);
+
+  // Function to show or hide the right sidebar
+  const toggleRightSideBar = () => {
+    setShowRightSideBar(!showRightSideBar);
   };
+  const toggleSideBar = () => {
+    setShowSideBar(!showSideBar); // Toggle state
+  };
+
   const link = [
     {
       icon: <IoSearchOutline />,
       name: "Search",
-      link: "/search", 
+      link: "/search",
     },
     {
       icon: <CiDiscount1 />,
@@ -47,63 +57,82 @@ const Hearder = () => {
 
   return (
     <>
-      <div
-        className="Black-Overlay w-full h-full fixed duration-500 z-50 "
-        onClick={hideSideMenu}
-        style={{
-          opacity: toggle ? 1 : 0,
-          visibility: toggle ? "visible" : "hidden",
-        }}
-      ></div>
+      {/* Overlay to hide menus when clicked outside */}
+      {(showLeftSideBar || showRightSideBar) && (
+        <div
+          className="Black-Overlay w-full h-full fixed z-40 bg-black opacity-50"
+          onClick={() => {
+            setShowLeftSideBar(false);
+            setShowRightSideBar(false);
+          }}
+        ></div>
+      )}
 
+      {/* Right Side Menu */}
       <div
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-        className="w-[754px] bg-white h-full absolute duration-500 z-50 "
-        style={{
-          left: toggle ? 0 : "-100%",
-        }}
+        className={`fixed top-0 right-0 w-[754px] h-full bg-white z-50 duration-500 transform ${
+          showRightSideBar ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-    <SideBar/>
+        <SideBar hideSideMenu={toggleSideBar} />
       </div>
 
+      {/* Left Side Menu (Sign In) */}
+      <div
+        className={`fixed top-0 left-0 w-[754px] h-full bg-white z-50 duration-500 transform ${
+          showLeftSideBar ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <LeftSideBar hideSideMenu={toggleLeftSideBar} />
+      </div>
+
+      {/* Header */}
       <header className="p-[15px] shadow-xl">
-        <div className="max-w-[1200px] mx-auto  flex items-center">
+        <div className="max-w-[1200px] mx-auto flex items-center">
+          {/* Logo */}
           <div className="w-[70px] hover:scale-125 transition-all duration-500 cursor-pointer">
-            <img src={logo} alt="" className="w-full" />
+            <img src={logo} alt="Logo" className="w-full" />
           </div>
-          <div >
-            <span className=" font-bold border-b-[3px] pr-3">Kolkata</span>
-            Thakurpukur ,India{" "}
+
+          {/* Location */}
+          <div>
+            <span className="font-bold border-b-[3px] pr-3">Kolkata</span>
+            Thakurpukur, India{" "}
             <RiArrowDownSLine
-              onClick={showSliderMenu}
+              onClick={toggleRightSideBar} // Open right sidebar for location change
               fontSize={25}
-              className=" inline text-[#11ff00]  cursor-pointer"
+              className="inline text-[#11ff00] cursor-pointer"
             />
           </div>
-          <nav className="flex list-none gap-5 ml-auto text-[18] font-semibold">
-            {link.map((link, index) => {
-              return (
-                <li
-                  key={index}
-                  className=" flex items-center hover:text-[#11ff00] gap-2 cursor-pointer"
-                >
-                  {link.link ? (
-                    <Link to={link.link} className="flex items-center gap-2">
-                      {link.icon}
-                      {link.name}
-                    </Link>
-                  ) : (
-                    <>
-                      {link.icon}
-                      {link.name}
-                    </>
-                  )}
-                  <sup className="text-[#11ff00]">{link.sup}</sup>
-                </li>
-              );
-            })}
+
+          {/* Navigation Links */}
+          <nav className="flex list-none gap-5 ml-auto text-[18px] font-semibold">
+            {link.map((link, index) => (
+              <li
+                key={index}
+                className="flex items-center hover:text-[#11ff00] gap-2 cursor-pointer"
+              >
+                {link.link ? (
+                  <Link to={link.link} className="flex items-center gap-2">
+                    {link.icon}
+                    {link.name}
+                  </Link>
+                ) : (
+                  <div
+                    className="flex items-center gap-2"
+                    onClick={() => {
+                      if (link.name === "SignIn") {
+                        toggleLeftSideBar(); // Open left sidebar for SignIn
+                      }
+                    }}
+                  >
+                    {link.icon}
+                    {link.name}
+                  </div>
+                )}
+                <sup className="text-[#11ff00]">{link.sup}</sup>
+              </li>
+            ))}
           </nav>
         </div>
       </header>
@@ -111,4 +140,4 @@ const Hearder = () => {
   );
 };
 
-export default Hearder;
+export default Header;

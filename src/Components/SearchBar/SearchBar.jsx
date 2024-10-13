@@ -1,10 +1,10 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
 import Hearder from "../Header/Hearder";
 import ReccItem from "./ReccItem";
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState(""); 
-  const [suggestionsVisible, setSuggestionsVisible] = useState(false); 
+  const [searchTerm, setSearchTerm] = useState("");
+  const [suggestionsVisible, setSuggestionsVisible] = useState(false);
 
   const items = [
     "Pizza",
@@ -17,6 +17,9 @@ const SearchBar = () => {
     "Fries",
     "Noodles",
     "Ice Cream",
+    "Biryani",
+    "Momo",
+    "Alfredo",
   ];
 
   const handleSearch = (event) => {
@@ -27,7 +30,6 @@ const SearchBar = () => {
   const filteredItems = items.filter((item) =>
     item.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
 
   const handleSuggestionClick = (suggestion) => {
     setSearchTerm(suggestion);
@@ -48,7 +50,6 @@ const SearchBar = () => {
           <i className="fa-solid fa-magnifying-glass text-[25px] text-gray-500 cursor-pointer" />
         </div>
 
-    
         {suggestionsVisible && searchTerm && (
           <ul className="border border-gray-200 bg-white w-[800px] max-h-[200px] overflow-y-auto mt-2 rounded-lg shadow-lg">
             {filteredItems.length > 0 ? (
@@ -67,7 +68,7 @@ const SearchBar = () => {
           </ul>
         )}
       </div>
-      <ReccItem/>
+      <ReccItem />
     </>
   );
 };
