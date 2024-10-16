@@ -14,17 +14,17 @@ const Header = () => {
   const [showLeftSideBar, setShowLeftSideBar] = useState(false); 
   const [showRightSideBar, setShowRightSideBar] = useState(false); 
 
-  // Function to show or hide the left sidebar
+  
   const toggleLeftSideBar = () => {
     setShowLeftSideBar(!showLeftSideBar);
   };
 
-  // Function to show or hide the right sidebar
+ 
   const toggleRightSideBar = () => {
     setShowRightSideBar(!showRightSideBar);
   };
   const toggleSideBar = () => {
-    setShowSideBar(!showSideBar); // Toggle state
+    setShowSideBar(!showSideBar); 
   };
 
   const link = [
@@ -53,6 +53,7 @@ const Header = () => {
       icon: <BsCart2 />,
       name: "Cart",
       sup: "(0)",
+      link: "/Cart",
     },
   ];
 

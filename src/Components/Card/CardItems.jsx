@@ -25,10 +25,8 @@ const CardItems = () => {
         <div className="text-[25px] font-bold">
           Top restaurant chains in Kolkata
         </div>
-        <div className="flex">
-         
-       
-        </div>
+          
+     
       </div>
       <div className="flex gap-3 overflow-hidden">
         {data.map((d, i) => {
