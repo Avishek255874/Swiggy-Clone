@@ -1,5 +1,5 @@
 import React from "react";
-import logos from "../../assets/Group 1.svg";
+import logos from "../../assets/Zesty.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { FaUserCircle } from "react-icons/fa";
 
@@ -7,16 +7,16 @@ const NewHeader = () => {
   return (
     <header className="shadow-xl  ">
       <div className="max-w-[1200px] mx-auto  flex  items-center ">
-        <div className="w-[100px] cursor-pointer">
+        <div className="w-[70px] cursor-pointer">
           <img src={logos} alt=" imageLogo" />
         </div>
         <div className="pl-5">
-          <i class="fa-solid fa-location-arrow text-[#11ff00] text-[20px] " />
+          <i class="fa-solid fa-location-arrow text-[#12ff01] text-[20px] " />
           <span className=" font-bold "> Setup your precise location</span>
 
           <RiArrowDownSLine
             fontSize={25}
-            className=" inline text-[#11ff00]  cursor-pointer"
+            className=" inline text-[#12ff01]  cursor-pointer"
           />
         </div>
         <div className=" list-none gap-5 ml-auto text-center">

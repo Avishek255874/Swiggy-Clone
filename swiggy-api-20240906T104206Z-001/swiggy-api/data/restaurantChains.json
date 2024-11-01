@@ -108,5 +108,15 @@
         "maxTime": 40,
         "name": "Cake",
         "place": "Chopsani Housing Board"
+    },
+    {
+        "image": "6e04be27387483a7c00444f8e8241108.jpeg",
+        "offer": "₹1-5 OFF ABOVE ₹179",
+        "title": "The Good Bowl",
+        "rating": 4.4,
+        "minTime": 30,
+        "maxTime": 35,
+        "name": "Biryani, North India",
+        "place": "Shastri Nagar"
     }
 ]

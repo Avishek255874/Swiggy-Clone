@@ -8,8 +8,6 @@ const Offers = () => {
       <NewHeader />
       <br/>
       <OnlineDelivery />
-    
-
     </>
   );
 };

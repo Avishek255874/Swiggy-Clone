@@ -46,7 +46,7 @@ const SideBar = ({ hideSideMenu }) => {
       >
         <MdOutlineLocationSearching className="text-[25px] font-light  " />
         <div className="ps-3">
-          <p className="text-[16px] pb-1 hover:text-[#11ff00]">
+          <p className="text-[16px] pb-1 hover:text-[#12ff01]">
             Get current location
           </p>
           <p className="text-[13px] text-gray-500">Using GPS</p>
@@ -75,7 +75,7 @@ const SideBar = ({ hideSideMenu }) => {
         <div className="flex items-center p-4">
           <RxCountdownTimer className="text-[20px] font-light  " />
           <div className="ps-3">
-            <p className="text-[16px] pb-1 hover:text-[#11ff00]">Kolkata</p>
+            <p className="text-[16px] pb-1 hover:text-[#12ff01]">Kolkata</p>
             <p className="text-[13px] text-gray-500">West Bengal, India</p>
           </div>
         </div>

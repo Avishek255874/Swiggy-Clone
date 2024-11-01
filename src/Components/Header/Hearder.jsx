@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Zesty.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
 import { CiDiscount1 } from "react-icons/ci";
@@ -103,7 +103,7 @@ const Header = () => {
             <RiArrowDownSLine
               onClick={toggleRightSideBar}
               fontSize={25}
-              className="inline text-[#11ff00] cursor-pointer"
+              className="inline text-[#12ff01] cursor-pointer"
             />
           </div>
 
@@ -111,7 +111,7 @@ const Header = () => {
             {link.map((link, index) => (
               <li
                 key={index}
-                className="flex items-center hover:text-[#11ff00] gap-2 cursor-pointer"
+                className="flex items-center hover:text-[#12ff01] gap-2 cursor-pointer"
               >
                 {link.link ? (
                   <Link to={link.link} className="flex items-center gap-2">
@@ -131,7 +131,7 @@ const Header = () => {
                     {link.name}
                   </div>
                 )}
-                <sup className="text-[#11ff00]">{link.sup}</sup>
+                <sup className="text-[#12ff01]">{link.sup}</sup>
               </li>
             ))}
           </nav>

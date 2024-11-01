@@ -19,7 +19,7 @@ const LeftSideBar = () => {
               <p className="text-[15px]">
                 or{" "}
                 <span
-                  className="text-[#11ff00] cursor-pointer"
+                  className="text-[#12ff01] cursor-pointer"
                   onClick={toggleForm}
                 >
                   create an account
@@ -32,7 +32,7 @@ const LeftSideBar = () => {
               <p className="text-[15px]">
                 or{" "}
                 <span
-                  className="text-[#11ff00] cursor-pointer"
+                  className="text-[#12ff01] cursor-pointer"
                   onClick={toggleForm}
                 >
                   login
